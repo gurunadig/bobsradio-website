@@ -1,0 +1,14 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo-black{
+    color: black !important;
+}
+
+
+.podcastgrid{
+    max-height: auto;
+    min-height: 350px;
+}

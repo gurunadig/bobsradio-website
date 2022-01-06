@@ -1,0 +1,42 @@
+
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+<div class="row">
+    <div class="col-12">
+
+        <h2 class="text-center">Artist</h2>
+    </div>
+</div>
+<div class="row">
+    {% for artist in artists %}
+    <div class="col-5 card">
+        <h2>
+            {{ artist.artist_name }}
+        </h2>
+        <img src="{{ artist.image.url }}" alt="" class="img-fluid mt-4 mb-4" />
+
+        <p>{{ artist.bio |safe }}</p>
+        <p>{{ artist.genre }}</p>
+        <p>{{ artist.year_of_inception }}</p>
+        <p>{{ artist.albums }}</p>
+        <p>{{ artist.songs_trivia }}</p>
+        <p>{{ artist.anniversary_date }}</p>
+        <p>
+            <a target="_blank" href="{{ artist.facebook_url }}">Facebook Profile</a>
+            
+        </p>
+        <p>
+            <a target="_blank" href="{{ artist.instagram_url }}">
+                Instagram Profile
+            </a>
+        </p>
+    </div>
+    {% endfor %}
+</div>
+</div>
+
+{% endblock content %}
