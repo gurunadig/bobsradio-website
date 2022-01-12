@@ -44,12 +44,13 @@
                 
             </p>
             <p>
-                <span>FB :</span> <br>{{ artist.facebook_url|safe }}
-                
-            </p>
-            <p>
-                <span>IG :</span> <br> {{ artist.instagram_url|safe }}
-                
+                <span class="artdetahead">Follow @</span>
+                <a href="{{ artist.facebook_url|safe }}">
+                    <i class="fab fa-facebook-square iconscon ml-3"></i> 
+                </a>
+                <a href="{{ artist.instagram_url|safe }}">
+                    <i class="fab fa-instagram-square iconscon ml-3"></i> 
+                </a>
             </p>
         </div>
 

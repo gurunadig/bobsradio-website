@@ -58,6 +58,14 @@ body{
   font-weight: 600;
 }
 
+.nodecor{
+  text-decoration: none !important;
+}
+
+.iconscon{
+  font-size:1.5rem;
+  color: #000;
+}
 
 
 .card {
