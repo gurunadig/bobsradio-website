@@ -4,20 +4,30 @@
 
 {% block content %}
 <div class="container">
-    <div class="row d-flex justify-content-between">
+    <div class="row mt-4">
         <div class="col-12">
-
-            <h2 class="text-center">Podcast</h2>
+            <h2>Bob's Podcast</h2>
         </div>
+    </div>
+    <div class="row mt-5 d-flex justify-content-between">
         {% for podcast in podcasts %}
-        <div class="col-4 card podcastgrid">
-            <h2>
-                {{ podcast.title }}
-            </h2>
-            <iframe class="img-fluid podcastiframe" src="{{ podcast.url }}" frameborder="0"></iframe>
-            
+        <div class="col-3">
+            <div class="row artist-grid">
+                <div class="col-12 p-0 ">
+                    <!-- <img src="{{ artist.image.url }}" alt="" class="img-fluid artist-img" /> -->
+                    <iframe class="img-fluid podcastiframe" src="{{ podcast.url }}" frameborder="0"></iframe>
+                </div>
+                <div class="col-12 artistnamegrid">
+                    <p class="text-center artistname">
+                        {{ podcast.title }}
+                    </p>
+        
+                </div>
+            </div>
         </div>
+
         {% endfor %}
     </div>
 </div>
+
 {% endblock content %}

@@ -1,11 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from . import views
-from .models import Artist, Podcast
+from .models import Artist, Podcast, Radiolink
 
 
 def home(request):
-    return render(request, 'radio/radio.html')   
+    artists = Artist.objects.all()[0:3]
+    radiolinks = Radiolink.objects.all()
+    context = {'artists':artists, 'radiolinks':radiolinks}
+    return render(request, 'radio/radio.html', context)   
 
 
 def artist(request):
@@ -29,3 +32,8 @@ def podcast(request):
     podcasts = Podcast.objects.all()
     context = {'podcasts':podcasts}
     return render(request, 'radio/podcast.html', context)   
+
+def artistdetails(request, pk):
+    artistdetails = Artist.objects.filter(id=pk)
+    context = {'artistdetails':artistdetails}
+    return render(request, 'radio/ArtistDetails.html', context)   

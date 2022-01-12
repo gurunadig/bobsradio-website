@@ -1,0 +1,60 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-12">
+            <h2>Bob's Artist</h2>
+        </div>
+    </div>
+    <div class="row mt-5 d-flex justify-content-between">
+        {% for artist in artistdetails %}
+        <div class="col-12 col-md-3 col-lg-3">
+            <div class="row artist-grid">
+                <div class="col-12 p-0 ">
+                    <img src="{{ artist.image.url }}" alt="" class="img-fluid artist-img" />
+                </div>
+                <div class="col-12 artistnamegrid">
+                    <p class="text-center artistname">
+                        {{ artist.artist_name }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-11 col-md-8 col-lg-8 card">
+            <p class="mt-4">
+
+                <span class="artdetahead">Bio :</span> <br> {{ artist.artist_bio|safe }}
+            </p>
+            <p>
+               <span class="artdetahead">Genre :</span> <br> {{ artist.genre|safe }}
+                
+            </p>
+            <p>
+                <span class="artdetahead">Year of Inception :</span> <br> {{ artist.year_of_inception|date:"d N Y"|safe }}
+                
+            </p>
+            <p>
+                <span>Albums :</span> <br> {{ artist.albums|safe }}
+                
+            </p>
+            <p>
+                <span class="artdetahead">Song Trivia :</span> <br> {{ artist.songs_trivia|safe }}
+                
+            </p>
+            <p>
+                <span>FB :</span> <br>{{ artist.facebook_url|safe }}
+                
+            </p>
+            <p>
+                <span>IG :</span> <br> {{ artist.instagram_url|safe }}
+                
+            </p>
+        </div>
+
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

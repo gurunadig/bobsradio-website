@@ -9,4 +9,5 @@ urlpatterns = [
     path('contact', views.contact, name='contact'),
     path('radiotv', views.radiotv, name='radiotv'),
     path('podcast', views.podcast, name='podcast'),
+    path('ArtistDetails/<str:pk>', views.artistdetails, name='artistdetails'),
 ]

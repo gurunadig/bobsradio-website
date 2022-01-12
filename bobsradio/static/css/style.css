@@ -3,6 +3,22 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+.navbar{
+    background: rgb(237,28,36);
+    background: linear-gradient(90deg, rgba(237,28,36,1) 0%, rgba(9,9,121,1) 60%, rgba(57,48,142,1) 100%);
+    min-height: 70px;
+    color: #fff;
+}
+
+.navbar-brand{
+    color: #fff !important;
+}
+
+.navanchor{
+    color: #fff !important;
+}
+
+
 .logo-black{
     color: black !important;
 }
@@ -12,3 +28,74 @@ body{
     max-height: auto;
     min-height: 350px;
 }
+.artistnamegrid{
+    background: rgb(237,28,36);
+    background: linear-gradient(90deg, rgba(237,28,36,1) 0%, rgba(9,9,121,1) 60%, rgba(57,48,142,1) 100%);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.artistname{
+    font-size:1.5rem;
+    margin-top:10px;
+    color: #fff;
+
+}
+
+.artist-grid{
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.artist-img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    min-height:200px;
+}
+
+
+.artdetahead{
+  font-size:1.2rem;
+  font-weight: 600;
+}
+
+
+
+.card {
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 1rem;
+    position: relative;
+    width: 300px;
+  }
+  
+  .card-3 {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+
+  .thetext{
+    font-size: 1.5rem;
+    word-spacing: 0.5rem;
+  }
+
+
+
+  .imgartist{
+    max-width: 300px;
+  }
+
+  .artistp{
+    font-size: 1.5rem;
+  }
+
+  .artistp p{
+    margin-top: 20px;
+    font-weight: 600;
+    text-align: justify;
+    padding: 10px;
+  }
+
+  .artistp li{
+    font-weight: 600;
+    text-align: justify;
+  }

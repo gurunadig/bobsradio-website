@@ -24,3 +24,11 @@ class Podcast(models.Model):
 
     def __str__(self):
         return self.title
+
+
+
+class Radiolink(models.Model):
+    url = models.TextField(blank=False, null=False)
+
+    def __str__(self):
+        return self.url
