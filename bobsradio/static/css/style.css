@@ -18,6 +18,11 @@ body{
     color: #fff !important;
 }
 
+.custicon{
+  
+  color: #fff !important;
+
+}
 
 .logo-black{
     color: black !important;
@@ -106,4 +111,26 @@ body{
   .artistp li{
     font-weight: 600;
     text-align: justify;
+  }
+
+
+  @media screen and (max-width: 480px) { 
+    .carousel{
+      min-height: 250px;
+    }
+
+    .carousel-item{
+      min-height:250px;
+    } 
+
+    .slidimg{
+      min-height: auto;
+    }
+
+    .thetext{
+      font-size: 1.2rem;
+      text-align: justify !important;
+      word-spacing: 0px;
+      padding:10px
+    }
   }
